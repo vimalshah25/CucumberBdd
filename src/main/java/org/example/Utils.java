@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,6 +30,9 @@ public class Utils extends BrowserManager{
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+    public static void verifyCurrentURL(String url_name){
+        Assert.assertTrue(driver.getCurrentUrl().equals(url_name));
     }
 
 

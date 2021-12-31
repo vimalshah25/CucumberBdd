@@ -14,7 +14,7 @@ public class BrowserManager extends BasePage{
     }
     public void closeBrowser(){
 
-        driver.close();
+       // driver.close();
     }
 
 }
